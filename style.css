@@ -1,0 +1,137 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--roboto-font);
+}
+
+:root{
+    --roboto-font : 'Roboto', sans-serif;
+}
+
+.weather-app-container{
+   background-color: black;
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   z-index: -1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+}
+
+.weather-app-container::before{
+    content: "";
+    background-image: url('https://github.com/meabhisingh/jsBeginnerProjects/blob/master/7/bg.png?raw=true');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.4;   
+}
+
+.weather-details-container{
+    z-index: 3;
+    display: flex;
+align-items: center;
+    justify-content: space-around;
+    width: 23%;
+}
+.remain-section{
+    color: white;
+    font-weight: 400;
+}
+
+.temperature-section{
+    font-size: 3rem;
+    color: white;
+    font-weight: 600;
+}
+
+.city{
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.city-icon-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-day-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time{
+    margin-right: 1rem;
+}
+
+.weather-icon{
+    width: 40px;
+}
+
+
+.search-container{
+    position: absolute;
+    bottom: 0%;
+    background-color: rgba(0,0,0,0.4);
+    height: 15vh;
+    width: 100%;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+}
+.search-section{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+#user-val{
+    width: 60%;
+    padding: .7rem;
+    outline: none;
+    border-bottom: 1px solid black;
+    background: none;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    caret-color: white;
+}
+
+#user-val:focus{
+    color: white;
+}
+
+input:focus{
+    color: white;
+}
+.btn{
+    background-color: orange;
+    padding: .4rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1130px)and (min-width:800px){
+    .weather-details-container{
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+@media screen and (max-width:700px){
+    .weather-details-container{
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
